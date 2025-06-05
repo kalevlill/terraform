@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"app","Source":"./modules/container_service","Dir":"modules/container_service"},{"Key":"nginx","Source":"./modules/container_service","Dir":"modules/container_service"}]}
