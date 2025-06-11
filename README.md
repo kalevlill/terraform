@@ -49,3 +49,14 @@ A: Die Outputs zeigen nach dem terraform apply die Werte an, die im output {}-Bl
 * Wie hast du den Inhalt der Variable nginx_html_content in die index.html Datei im laufenden Docker Container bekommen? Welche Terraform-Funktion (Provisioner) wurde dafür genutzt? (Hinweis: Dies ist nur eine von mehreren möglichen Methoden). 
 
 A: Ich habe den Inhalt der Variable nginx_html_content mit dem Provisioner local-exec in die index.html im laufenden Docker-Container geschrieben. Dabei wurde ein lokaler Befehl ausgeführt, der per docker exec den Container betritt und den HTML-Text direkt in die Datei schreibt.
+
+
+aws-vpc-ec2
+
+In diesem Projekt wird mit Terraform eine einfache AWS-Infrastruktur bereitgestellt.  
+Die Konfiguration erstellt folgende Ressourcen:
+
+- Ein virtuelles privates Netzwerk (VPC) mit dem IP-Bereich 10.0.0.0/16  
+- Ein Subnetz im VPC mit dem IP-Bereich 10.0.1.0/24  
+- Eine Sicherheitsgruppe, die SSH-Zugriff (Port 22) von überall erlaubt  
+- Eine EC2-Instanz im Subnetz, die die Sicherheitsgruppe nutzt und per SSH erreichbar ist
